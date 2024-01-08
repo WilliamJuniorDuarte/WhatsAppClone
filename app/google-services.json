@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "45105537618",
+    "project_id": "whastappclone-9392b",
+    "storage_bucket": "whastappclone-9392b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45105537618:android:46460680332f9ae13bb58b",
+        "android_client_info": {
+          "package_name": "com.example.whastappclone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7o4VHLn7CoPo5uMhAdE1ZTfNLlNTD-yM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

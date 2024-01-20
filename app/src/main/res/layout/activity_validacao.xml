@@ -8,6 +8,23 @@
         android:background="@color/colorZap"
         tools:context="activity.ValidacaoActivity">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Você recebeu um SMS para validação de seu número. Digíte o código de validação abaixo:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edt_codSMS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.166" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="@dimen/largura_logo"
@@ -20,76 +37,44 @@
         app:layout_constraintVertical_bias="0.182" />
 
     <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Digíte o seu usuário"
-        android:inputType="text"
-        android:text=""
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="12dp"
-        android:ems="10"
-        android:hint="DDD"
-        android:inputType="number"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/editTextNumber3"
-        app:layout_constraintStart_toEndOf="@+id/editTextNumber2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
-
-    <EditText
-        android:id="@+id/editTextNumber2"
-        android:layout_width="56dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="+55"
-        android:inputType="number"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
-
-    <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/edt_codSMS"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="88dp"
         android:ems="10"
-        android:hint="9 9999-9999"
+        android:hint="Digíte o código"
         android:inputType="number"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/bt_validar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.794"
-        app:layout_constraintStart_toEndOf="@+id/editTextNumber"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bt_validar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="15dp"
-        android:text="CADASTRAR"
+        android:text="VALIDAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Validação"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

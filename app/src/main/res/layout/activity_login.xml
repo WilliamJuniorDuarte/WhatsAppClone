@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edt_"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorZap"
@@ -19,7 +20,7 @@
         app:layout_constraintVertical_bias="0.182" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/edt_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -36,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/edt_codArea"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -46,12 +47,12 @@
         android:hint="DDD"
         android:inputType="number"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/editTextNumber3"
-        app:layout_constraintStart_toEndOf="@+id/editTextNumber2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintEnd_toStartOf="@+id/edt_telefone"
+        app:layout_constraintStart_toEndOf="@+id/edt_codPais"
+        app:layout_constraintTop_toBottomOf="@+id/edt_username" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/edt_codPais"
         android:layout_width="56dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -61,13 +62,13 @@
         android:inputType="number"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_username" />
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/edt_telefone"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="9 9999-9999"
@@ -75,11 +76,11 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.794"
-        app:layout_constraintStart_toEndOf="@+id/editTextNumber"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintStart_toEndOf="@+id/edt_codArea"
+        app:layout_constraintTop_toBottomOf="@+id/edt_username" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bt_cadastrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

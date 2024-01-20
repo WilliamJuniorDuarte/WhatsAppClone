@@ -12,7 +12,7 @@
             android:theme="@style/Theme.WhastappClone"
             tools:targetApi="31">
         <activity
-            android:name="activity.LoginActivity"
+            android:name="activity.ValidacaoActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -28,7 +28,7 @@
             </meta-data>
         </activity>
         <activity
-                android:name="activity.ValidacaoActivity"
+                android:name="activity.LoginActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

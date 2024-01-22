@@ -9,6 +9,7 @@ import android.provider.Settings;
 import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -71,15 +72,20 @@ public class LoginActivity extends AppCompatActivity {
                 Log.d("NOME", " "+nome);
                 Log.d("TELEFONE", " "+enderecoCompleto);
 
-//                Preferencias preferencias = new Preferencias(view.getContext());
-//                preferencias.salvarPreferencesUsuario(nome, enderecoCompleto, token);
+                Preferencias preferencias = new Preferencias(view.getContext());
+                preferencias.salvarPreferencesUsuario(nome, enderecoCompleto, token);
 //                HashMap<String, String> usuario = preferencias.getRecuperaPreferencesUsuario();
-//
-//                Log.d("NOME PREF", " "+usuario.get("nome"));
-//                Log.d("TELEFONE PREF", " "+usuario.get("telefone"));
-//                Log.d("TOKEN PREF", " "+usuario.get("token"));
 
-                enviaSMS("+"+enderecoCompleto, messageSMS );
+
+                boolean sms = enviaSMS("+"+enderecoCompleto, messageSMS );
+
+                if (sms){
+                    Intent intent = new Intent(LoginActivity.this, ValidacaoActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(view.getContext(), "Erro ao tentar enviar SMS, tente novamente", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
